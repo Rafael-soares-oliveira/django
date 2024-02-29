@@ -5,6 +5,7 @@ cffi==1.16.0
 colorama==0.4.6
 coverage==7.4.0
 Django==5.0.1
+django-crispy-forms==2.1
 django-debug-toolbar==4.3.0
 django-pytest==0.2.0
 djangorestframework==3.14.0
