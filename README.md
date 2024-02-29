@@ -37,6 +37,17 @@
       constants.WARNING: 'message-warning',
     }
   - INTERNAL_IPS = ['127.0.0.1',] -> ips allowed to django toolbar
+
+- open urls.py:
+  - from django.urls import include
+  - from django.conf.urls.static import static
+  - path('__debug__/', include('debug_toolbar.urls')), -> add in urlpatterns
+  - urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) -> insert after urlpatterns
+  - urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) -> insert after urlpatterns
+ 
+- open terminal:
+  - python manage.py check
+  - python manage.py createsuperuser
  
 - create folder:
   - base_static -> store css/js files
